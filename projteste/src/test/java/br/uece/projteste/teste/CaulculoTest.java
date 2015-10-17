@@ -11,7 +11,7 @@ public class CaulculoTest {
 
 	@Test
 	public void test() {
-		assertEquals(Calculo.somar(2, 3), 6);
+		assertEquals(Calculo.somar(2, 3), 6 );
 	}
 
 }
