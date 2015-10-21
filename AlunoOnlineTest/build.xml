@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<project name="Deploy From Eclipse to Tomcat" basedir=".">
+
+	<property name="warfile" value="AlunoOnlineTest" />
+	<property name="APP" value="AlunoOnlineTest" />
+	<!-- <property name="toncat" value="\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\" />  -->
+	
+	<property name="toncat" value="/home/novajoc/appservers/apache-tomcat-7x/" />	
+    <property name="classes" location="${toncat}\webapps\${APP}\WEB-INF\classes"/>
+    <property name="test-classes" location="${toncat}\webapps\${APP}\WEB-INF\classes"  />
+    <property name="test-reports" location="${toncat}\webapps\${APP}\WEB-INF\classes"/>
+	<!-- <property name="destino" value="\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\webapps\" />  -->
+	<property name="destino" value="/home/novajoc/appservers/apache-tomcat-7x/" />
+	<property name="testdir" location="test" />
+	<property name="srcdir" location="src" />
+
+   <path id="classpath">
+        <fileset dir="${toncat}\lib">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="WebContent\WEB-INF\lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+ 
+    <path id="test-classpath">
+        <path refid="classpath"/>
+        <pathelement location="${classes}"/>
+        <pathelement location="${test-classes}"/>
+        <fileset dir="test">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+	<target name="unpack">
+		<unwar src="${warfile}.war" dest="${destino}${warfile}" />
+	</target>
+
+	<target name="create">
+		<war destfile="${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
+			<classes dir="build\classes" />
+			<fileset dir="WebContent">
+				<exclude name="WEB-INF/web.xml" />
+			</fileset>
+		</war>
+	</target>
+
+	<target name="copy">
+		<copy todir="${destino}" overwrite="true">
+			<fileset dir=".">
+				<include name="*.war" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- inicio teste -->
+	<target name="test" >
+        <mkdir dir="${test-reports}"/>
+        <junit printsummary="yes">
+            <classpath refid="test-classpath"/>
+            <formatter type="brief" usefile="false"/>
+            <formatter type="xml"/>
+            <batchtest todir="${test-reports}" failureproperty="failed"
+                       errorproperty="failed">
+                <fileset dir="${test-classes}" includes="**/*Test*.class"/>
+            </batchtest>
+        </junit>
+    </target>
+	<!-- fim teste -->
+
+	<target name="deploy">
+		<antcall target="create" />
+		<antcall target="unpack" />
+		<antcall target="test" />
+	</target>
+
+</project>

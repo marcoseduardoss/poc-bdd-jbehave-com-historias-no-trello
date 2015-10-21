@@ -1,0 +1,222 @@
+@import url("general.css");
+
+/* -- Specific styles ----------------------------- */
+
+form  { 
+	margin: 0px; padding: 0px; 
+}
+
+form .inputbox  { 
+	width: 120px; 
+	margin-left: 10px; 
+}
+
+.login  { 
+	margin: 0 auto; 
+	width: 500px; 
+	margin-bottom: 50px; 
+}
+
+h1 {
+  margin: 15px 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+#lock  {
+	background: url(../imagens/layout/logo_uece.png) 50% 0 no-repeat;
+	width: 150px;
+	height: 137px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#content-box .m {
+  padding: 10px;
+}
+
+#content-box .padding {
+  padding: 10px 10px 0 10px;
+}
+
+#section-box  { 
+	float: right; 
+	width: 100%; 
+	margin-left: 10px;
+}
+
+#section-box .m {
+  padding: 5px;
+}
+
+#section-box .padding {
+	background: none; padding: 0;
+}
+
+.button { 
+	text-align: right; 
+}
+
+.login-form    { 
+	text-align: left; 
+	width: 60%; 
+}
+
+.login-form h1 { 
+	display: none;
+}
+
+.login-form p  { 
+	padding: 0 1em 0 1em;
+}
+
+.login-text { 
+	text-align: left; 
+	width: 40%; 
+	float: left; 
+}
+
+#form-login label {
+	display: block;
+	float: left;
+	width: 120px;
+	text-align: right;
+	padding: 4px;
+	color: #666;
+	font-weight: bold;
+}
+
+#form-login .button_holder {
+	float: left;
+	padding-left: 180px;
+}
+
+#form-login div.button1{
+ 	float: left;
+}
+
+#form-login div.button1 div.next {
+	float: left;
+}
+
+/*------------Rounded--------------------------------------*/
+/** rounded corners **/
+div#toolbar-box {
+  background: #f7f7f7;
+}
+
+div#element-box {
+  background: #fff;
+}
+
+div#element-box div.section-box div.m {
+	background: #fbfbfb;
+
+}
+
+div.t, div.b {
+  height: 6px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+div.m {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 0 8px;
+}
+
+div#toolbar-box div.m {
+  padding: 0;
+}
+
+div#element-box div.m {
+  padding: 5px 10px;
+}
+
+div#submenu-box div.t {
+  background: url(../imagens/layout/j_border.png) 0 0 repeat-x;
+}
+
+div#submenu-box div.t div.t {
+   background: url(../imagens/layout/j_crn_tr_dark.png) 100% 0 no-repeat;
+}
+
+div#submenu-box div.t div.t div.t {
+   background: url(../imagens/layout/j_crn_tl_dark.png) 0 0 no-repeat;
+}
+
+div#submenu-box div.b {
+  background: url(../imagens/layout/j_border.png) 0 100% repeat-x;
+}
+
+div#submenu-box div.b div.b {
+   background: url(../imagens/layout/j_crn_br_dark.png) 100% 0 no-repeat;
+}
+
+div#submenu-box div.b div.b div.b {
+   background: url(../imagens/layout/j_crn_bl_dark.png) 0 0 no-repeat;
+}
+
+div#toolbar-box,
+div#element-box div.section-box {
+  background: #fbfbfb;
+}
+
+div#toolbar-box div.t,
+div#element-box div.section-box div.t {
+  background: url(../imagens/layout/j_border.png) 0 0 repeat-x;
+}
+
+div#toolbar-box div.t div.t,
+div#element-box div.section-box div.t div.t {
+   background: url(../imagens/layout/j_crn_tr_med.png) 100% 0 no-repeat;
+}
+
+div#toolbar-box div.t div.t div.t,
+div#element-box div.section-box div.t div.t div.t {
+   background: url(../imagens/layout/j_crn_tl_med.png) 0 0 no-repeat;
+}
+
+div#toolbar-box div.b,
+div#element-box div.section-box div.b {
+  background: url(../imagens/layout/j_border.png) 0 100% repeat-x;
+}
+
+div#toolbar-box div.b div.b,
+div#element-box div.section-box div.b div.b {
+   background: url(../imagens/layout/j_crn_br_med.png) 100% 0 no-repeat;
+}
+
+div#toolbar-box div.b div.b div.b,
+div#element-box div.section-box div.b div.b div.b {
+   background: url(../imagens/layout/j_crn_bl_med.png) 0 0 no-repeat;
+}
+
+div#element-box div.t {
+  background: url(../imagens/layout/j_border.png) 0 0 repeat-x;
+}
+
+div#element-box div.t div.t {
+   background: url(../imagens/layout/j_crn_tr_light.png) 100% 0 no-repeat;
+}
+
+div#element-box div.t div.t div.t {
+   background: url(../imagens/layout/j_crn_tl_light.png) 0 0 no-repeat;
+}
+
+div#element-box div.b {
+  background: url(../imagens/layout/j_border.png) 0 100% repeat-x;
+}
+
+div#element-box div.b div.b {
+   background: url(../imagens/layout/j_crn_br_light.png) 100% 0 no-repeat;
+}
+
+div#element-box div.b div.b div.b {
+   background: url(../imagens/layout/j_crn_bl_light.png) 0 0 no-repeat;
+}

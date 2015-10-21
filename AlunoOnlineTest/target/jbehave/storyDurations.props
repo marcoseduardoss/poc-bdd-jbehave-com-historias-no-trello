@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Tue Oct 20 23:01:46 BRST 2015
+threads=1
+total=0
+threadAverage=0
+br/uece/eada/teste/execucao_test_sub.story=0

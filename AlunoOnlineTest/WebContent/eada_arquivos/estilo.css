@@ -1,0 +1,418 @@
+@CHARSET "ISO-8859-1";
+
+* {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+	border: 0px;
+}
+img {
+	border: 0px;
+}
+
+body {
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin: 0px;	
+	text-decoration: none;
+}
+
+form {
+	padding: 0pt;
+	margin: 0pt;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.painelPergunta {
+	text-align: center;
+	font-size: 20px;
+}
+
+.flutuaEsquerda{
+	float:left;
+}
+
+.flutuaDireita{
+	float:right;
+}
+
+.topo {
+	display: block;
+	height: 80px;
+	min-height: 80px;
+	margin-bottom: 20px;
+}
+
+.erroMensagem {
+	list-style-type: none;
+	list-style: none;
+	width: 96%;
+	min-height: 17px;
+	border: 1px solid #ff0000;
+	background-color: #ffaaaa;
+	color: #000000;
+	padding: 0px;
+	font-weight: bold;
+}
+
+.sucessoMensagem {
+	list-style-type: none;
+	list-style: none;
+	width: 96%;
+	min-height: 17px;
+	border: 1px solid #0000ff;
+	background-color: #cccccc;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.avisoMensagem {
+	list-style-type: none;
+	list-style: none;
+	background: #ffd;
+	width: 96%;
+	border: 1px solid #fe6;
+	font-weight: bold;
+	font-weight: bold;
+}
+
+.informacaoMensagem {
+	list-style-type: none;
+	list-style: none;
+	width: 96%;
+	background: #def;
+	border: 1px solid #9cf;
+	font-weight: bold;
+}
+
+.textoArea {
+	font-size: 16px;
+}
+
+input.grande {
+	width: 120;
+}
+
+.textoPeq {
+	font-size: 12px; 
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+.informacaoCampo {
+	color: #666;
+}
+
+.campoRequirido {
+	color: #FF0000;
+}
+
+.entrada {
+	width: 100%; color: #666;float: left; margin-bottom: 10px
+}
+
+.entrada h1 {
+	margin: 0;
+}
+
+.links_rapidos h1 {
+	margin: 5px 0 0 0; 
+	color: #333;
+	font-size: 11px; 
+	line-height: 12px;
+}
+
+.links_rapidos h2 {
+	text-align: left; 
+	color: #999; 
+	border-bottom: #f4f4f4 solid 1px; 
+	width: 90%;
+}
+
+.disciplias_matriculadas h2 {
+	text-align: left; 
+	color: #777; 
+	border-bottom: #ddd solid 1px; 
+	width: 100%;
+}
+
+
+/* ESTILO LINKS RÁPIDOS DA PAGINA INICIAL */
+
+
+.links_rapidos_inicio{
+	width: 100%; 
+	display: block; 
+	text-align: center; 
+	margin: auto; 
+	height:100px;
+}
+
+
+.links_rapidos_inicio h1 {
+	margin: 5px 0 0 0; 
+	color: #333;
+	font-size: 10px; 
+	line-height: 12px;
+}
+
+.links_rapidos_inicio h2 {
+	text-align: left; 
+	color: #777; 
+	border-bottom: #ddd solid 1px; 
+	width: 100%;
+}
+
+.links_rapidos_inicio img {
+	clear: both; padding:0 0 5px 0
+}
+
+.links_rapidos_inicio a{
+	font-size: 9px; 
+	text-decoration: none; 
+	color: #666; 
+	display: block; 
+	padding-bottom: 1px
+}
+
+.links_rapidos_inicio .item {	
+	width: 102px; 
+	height: 128px; 
+	float: left; 
+	margin-right: 5px; 
+	margin-bottom: 10px; 
+	background-image:url(../imagens/fundo_pag_ini.png);
+	background-repeat: no-repeat;
+}
+
+.links_rapidos_inicio .item_gmail {
+	width: 102px; 
+	height: 128px; 
+	float: left; 
+	margin-right: 5px; 
+	margin-bottom: 10px; 
+	background-image:url(../imagens/fundo_pag_ini_gmail.png);
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+}
+
+.item_gmail_chamada {
+	background-image: url("../imagens/chamada.png");
+    background-position: -12px 4px;
+    background-repeat: no-repeat;
+    float: left;
+    height: 204px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    position: relative;
+    top: -25px;
+    width: 208.2px;
+}
+
+.links_rapidos_inicio .item_gmail img {
+	height: 80px;
+}
+
+.links_rapidos_inicio .item_azul h1{
+	font-size: 14px
+}
+
+
+
+
+/* -----*/
+
+
+	
+.links_rapidos {
+	width: 90%; 
+	display: block; 
+	text-align: center; 
+	margin: auto; 
+	margin-left: 145px
+}
+
+.links_rapidos img {
+	clear: both; padding:0 0 5px 0
+}
+
+.links_rapidos a{
+	font-size: 10px; 
+	text-decoration: none; 
+	color: #666; 
+	display: block; 
+	padding-bottom: 3px
+}
+
+.links_rapidos .item {
+	width: 101px; 
+	height: 173px; 
+	float: left; 
+	margin-right: 5px; 
+	margin-bottom: 10px; 
+	background-image:url(../imagens/fundo_pag_ini.png);
+	background-repeat: no-repeat;
+}
+
+.links_rapidos .item_gmail {
+	width: 135px; 
+	height: 173px; 
+	float: left; 
+	margin-right: 5px; 
+	margin-bottom: 10px; 
+	background-image:url(../imagens/fundo_pag_ini_gmail.png);
+	background-repeat: no-repeat;
+}
+
+.item_gmail_chamada {
+	background-image: url("../imagens/chamada.png");
+    background-position: -9px -2px;
+    background-repeat: no-repeat;
+    float: left;
+    height: 174px;
+    margin-bottom: -37px;
+    margin-right: 5px;
+    position: relative;
+    top: 0px;
+    width: 137px;
+}
+.tab_titulo_tabela_notas_disciplina{
+	color: #276d56;
+	font-family: Arial,Verdana,sans-serif;
+	font-size: 10px;
+}
+.tab_label_notas_disciplina{
+	color: #276d56;
+	font-family: Arial,Verdana,sans-serif;
+	font-size: 10px;
+}
+
+.tab_colunas_notas_disciplina{
+	color: teal;
+	font-family: Arial,Verdana,sans-serif;
+	font-size: 10px;
+}
+
+.tab_label_nome_sit_disciplina{
+	color: #276d56;
+	font-family: Arial,Verdana,sans-serif;
+	font-size: 10px;
+}
+
+.tab_notas_disciplina{
+	color: #276d56;
+	font-family: Arial,Verdana,sans-serif;
+	font-size: 10px;
+}
+
+
+.links_rapidos .item_gmail img {
+	height: 80px;
+}
+
+.links_rapidos .item_azul h1{
+	font-size: 14px
+}
+
+.dr-pnl{
+	background-color:#fff;
+}
+
+.rich-panel-body{
+	background-color: #fff; 
+}
+
+.rich-stglpanel-body {
+	background-color: #fff; 
+}
+
+
+.links_funcionais {
+	background-image:url(../imagens/bg_painel_links_rapidos.png);
+	width: 100%; 
+	display: block; 
+	margin-bottom: 20px; 
+	border-bottom: #cdcdcd dotted 1px;
+}
+
+.titulo_links_funcionais {
+	color: #666;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	width: 1142px;
+	z-index: 1;
+	height: 38px;
+	background-color: #FFFFFF;
+}
+
+.titulo_links_funcionais h1{
+	margin: 0; 
+	font-size: 22px; 
+	margin-top: 15px
+}
+
+.titulo_links_funcionais h2{
+	margin: 0; 
+	font-size: 14px;
+}
+
+.titulo_links_funcionais h3{
+	margin: 0; 
+	font-size: 11px;
+}
+
+.titulo_links_funcionais img {
+	position: relative; 
+	top: 5px; 
+	margin-left: 5px; 
+	margin-right: 10px; 
+	float: left;
+}
+
+.menu_links_funcionais {
+	width: 70%; 
+	float: right; 
+	height: 92px; 
+	position: relative; 
+	z-index: 3
+}
+
+.menu_links_funcionais a{
+	display: block; 
+	float: right; 
+	text-align: center; 
+	margin: 10px
+}
+
+.menu_links_funcionais a:hover {
+	text-decoration: none; 
+	background-image: url(../imagens/hover_links_rapidos.png); 
+	background-repeat: no-repeat;
+}
+
+.menu_links_funcionais img {
+	margin: 0 auto 8px auto; 
+	clear: both; 
+	display: block;
+}
+
+.link-prad {
+	width: 100%; 
+	color: #666;
+	float: left; 	
+	text-align: justify; 
+	font-weight: bold;
+	padding-left:144px;
+	padding-bottom:30px;	
+}
