@@ -5,15 +5,22 @@
 
 	<property name="warfile" value="AlunoOnlineTest" />
 	<property name="APP" value="AlunoOnlineTest" />
-	<!-- <property name="toncat" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\" />  -->
+	<!---->
+	<property name="toncat" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\" />
 	
-	<property name="toncat" value="/home/novajoc/appservers/apache-tomcat-7x/" />	
+	<!-- 
+		<property name="toncat" value="/home/novajoc/appservers/apache-tomcat-7x/" />  
+	-->
+			
     <property name="classes" location="${toncat}\webapps\${APP}\WEB-INF\classes"/>
     <property name="test-classes" location="${toncat}\webapps\${APP}\WEB-INF\classes"  />
     <property name="test-reports" location="${toncat}\webapps\${APP}\WEB-INF\classes"/>
-	<!-- <property name="destino" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\webapps\" />  -->
+	<!-- --> 
+	<property name="destino" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\webapps\" />  
 	
+	<!--
 	<property name="destino" value="/home/novajoc/appservers/apache-tomcat-7x/" />
+	-->
 	<property name="testdir" location="test" />
 	<property name="srcdir" location="src" />
 
