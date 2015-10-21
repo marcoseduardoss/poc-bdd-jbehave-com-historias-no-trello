@@ -55,6 +55,12 @@
 			</fileset>
 		</copy>
 	</target>
+	
+	<target name="copy-build-class">
+		<copy todir="./build/classes" overwrite="true">
+			<fileset dir="${toncat}\webapps\${APP}\WEB-INF\classes"/>
+		</copy>
+	</target>
 
 	<!-- inicio teste -->
 	<target name="test" >
@@ -73,7 +79,9 @@
 	<target name="deploy">
 		<antcall target="create" />
 		<antcall target="unpack" />
+		<antcall target="copy-build-class" />		
 		<antcall target="test" />
 	</target>
 
 </project>
+
