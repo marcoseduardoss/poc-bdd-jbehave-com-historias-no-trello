@@ -5,22 +5,21 @@
 
 	<property name="warfile" value="AlunoOnlineTest" />
 	<property name="APP" value="AlunoOnlineTest" />
-	<!---->
-	<property name="toncat" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\" />
 	
+	<!---->
+	<property name="toncat" value="/home/novajoc/appservers/apache-tomcat-7x/" />
+	<property name="destino" value="/home/novajoc/appservers/apache-tomcat-7x/" />	 
+		
 	<!-- 
-		<property name="toncat" value="/home/novajoc/appservers/apache-tomcat-7x/" />  
+		<property name="toncat" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\" />	 	 
+		<property name="destino" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\webapps\" />  	
 	-->
 			
     <property name="classes" location="${toncat}\webapps\${APP}\WEB-INF\classes"/>
     <property name="test-classes" location="${toncat}\webapps\${APP}\WEB-INF\classes"  />
     <property name="test-reports" location="${toncat}\webapps\${APP}\WEB-INF\classes"/>
-	<!-- --> 
-	<property name="destino" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\webapps\" />  
+
 	
-	<!--
-	<property name="destino" value="/home/novajoc/appservers/apache-tomcat-7x/" />
-	-->
 	<property name="testdir" location="test" />
 	<property name="srcdir" location="src" />
 
@@ -64,7 +63,7 @@
 	</target>
 	
 	<target name="copy-build-class">
-		<copy todir="./build/classes" overwrite="true">
+		<copy todir="/home/novajoc/.jenkins/jobs/AlunoOnlineTest/workspace/AlunoOnlineTest/build/classes" overwrite="true">
 			<fileset dir="${toncat}\webapps\${APP}\WEB-INF\classes"/>
 		</copy>
 	</target>
