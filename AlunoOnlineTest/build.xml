@@ -44,7 +44,7 @@
 
 	<target name="deploy">
 		<war destfile="${destino}webapps/${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
-			<classes dir="classes" />
+			<classes dir="build/classes" />
 			<fileset dir="WebContent">
 				<exclude name="WEB-INF/web.xml" />
 			</fileset>
