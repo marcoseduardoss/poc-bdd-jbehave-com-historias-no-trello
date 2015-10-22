@@ -53,7 +53,7 @@
 					
 	<target name="compile">
         <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes" classpathref="test-classpath"/>
+        <javac srcdir="test" destdir="build/classes" classpathref="test-classpath"/>
     </target>		
 		
 	<!-- inicio teste  -->
