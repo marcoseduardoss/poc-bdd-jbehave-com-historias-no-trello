@@ -41,7 +41,7 @@
         </fileset>
     </path>
     
-	<target name="create">
+	<target name="create-war-in-tomcat">
 			<war destfile="${destino}webapps/${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
 				<classes dir="build/classes" />
 				<fileset dir="WebContent">
@@ -70,13 +70,14 @@
 	            	</batchtest> 
 	        </junit>
     	</target>
-	<!-- fim teste <antcall target="create" />-->
+	<!-- fim teste <antcall target="create-war-in-tomcat" />-->
 
 
 	<target name="deploy">
 		
 		<antcall target="compile" />			
 		<antcall target="test" />
+		<antcall target="create-war-in-tomcat" />
 	</target>
 
 
