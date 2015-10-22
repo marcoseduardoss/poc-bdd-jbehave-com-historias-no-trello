@@ -40,16 +40,11 @@
             <include name="*.jar"/>
         </fileset>
     </path>
-
-
-	<target name="deploy">
-		<war destfile="${destino}webapps/${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
-			<classes dir="build/classes" />
-			<fileset dir="WebContent">
-				<exclude name="WEB-INF/web.xml" />
-			</fileset>
-		</war>
-	</target>
+    
+    <target name="deploy">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
 
 
 </project>
