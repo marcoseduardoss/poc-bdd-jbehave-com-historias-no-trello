@@ -64,10 +64,6 @@
 		
 		
 	<target name="copy-build-class">
-        <mkdir dir="build" />
-    	<fileset dir="./build">
-        	<mkdir dir="classes" />
-    	</fileset>
 		<copy todir="./build/classes" overwrite="true">
 			<fileset dir="${toncat}\webapps\${APP}\WEB-INF\classes"/>
 		</copy>
