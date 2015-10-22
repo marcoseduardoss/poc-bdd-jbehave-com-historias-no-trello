@@ -25,8 +25,8 @@ public class AdderSteps {
 
 	@Then("o resultado da soma deve ser $c")
 	public void theResultMustBe(int c){
-		//assertEquals(2, adder.getResult());
-		assertEquals(c, adder.getResult());
+		assertEquals(2, adder.getResult());
+		//assertEquals(c, adder.getResult());
 	}
 
 }
