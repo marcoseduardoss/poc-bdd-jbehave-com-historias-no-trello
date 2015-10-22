@@ -58,16 +58,15 @@
 		
 	<!-- inicio teste  -->
 	<target name="test" >
-        <mkdir dir="${test-reports}"/>
-        <junit printsummary="yes">
-            <classpath refid="test-classpath"/>
-            <formatter type="brief" usefile="false"/>
-            <formatter type="xml"/>
-            <batchtest todir="${test-reports}" failureproperty="failed" errorproperty="failed">
-                <fileset dir="${test-classes}" includes="**/*Test*.class"/>
-            </batchtest> 
-        </junit>
-    </target>
+	        <junit printsummary="yes">
+	            
+	            	<classpath refid="test-classpath"/>
+	                        
+	            	<batchtest fork="yes">
+	                	<fileset dir="${test-classes}" includes="**/*Test*.class"/>
+	            	</batchtest> 
+	        </junit>
+    	</target>
 	<!-- fim teste -->
 
 
