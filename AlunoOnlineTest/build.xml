@@ -41,11 +41,8 @@
         </fileset>
     </path>
 
-	<target name="unpack">
-		<unwar src="${warfile}.war" dest="${warfile}" />
-	</target>
 
-	<target name="create">
+	<target name="deploy">
 		<war destfile="${destino}webapps/${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
 			<classes dir="classes" />
 			<fileset dir="WebContent">
@@ -54,42 +51,6 @@
 		</war>
 	</target>
 
-	<!--	
-	<target name="copy">
-		<copy todir="${destino}webapps" overwrite="true">
-			<fileset dir=".">
-				<include name="*.war" />
-			</fileset>
-		</copy>
-	</target>
-	-->	
-		
-	<target name="copy-build-class">
-		<copy todir="./build/classes" overwrite="true">			
-			<fileset dir="${warfile}/WEB-INF/classes/"/>
-		</copy>
-	</target>
-
-	<!-- inicio teste  -->
-	<target name="test" >
-        <mkdir dir="${test-reports}"/>
-        <junit printsummary="yes">
-            <classpath refid="test-classpath"/>
-            <formatter type="brief" usefile="false"/>
-            <formatter type="xml"/>
-            <batchtest todir="${test-reports}" failureproperty="failed" errorproperty="failed">
-                <fileset dir="${test-classes}" includes="**/*Test*.class"/>
-            </batchtest> 
-        </junit>
-    </target>
-	<!-- fim teste -->
-
-	<target name="deploy">
-		<antcall target="create" />
-		<antcall target="unpack" />
-		<antcall target="copy-build-class" />		
-		<antcall target="test" />
-	</target>
 
 </project>
 
