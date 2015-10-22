@@ -64,8 +64,8 @@
 		
 		
 	<target name="copy-build-class">
-		<copy todir="./build/classes" overwrite="true">
-			<fileset dir="${toncat}/webapps/${APP}/WEB-INF/classes"/>
+		<copy todir="./build/classes" overwrite="true">			
+			<fileset dir="${toncat}webapps/${APP}/WEB-INF/classes"/>
 		</copy>
 	</target>
 		
