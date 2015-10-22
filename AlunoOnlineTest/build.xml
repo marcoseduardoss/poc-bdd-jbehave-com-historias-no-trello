@@ -42,9 +42,8 @@
     </path>
     
     <target name="deploy">
-    	<classpath refid="test-classpath"/>
         <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes" classpathref="test-classpath"/>
     </target>
 
 
