@@ -61,12 +61,20 @@
 			</fileset>
 		</copy>
 	</target>
-	
+		
+		
 	<target name="copy-build-class">
-		<copy todir="/home/novajoc/.jenkins/jobs/AlunoOnlineTest/workspace/AlunoOnlineTest/build/classes" overwrite="true">
+        <mkdir dir="build" />
+    	<fileset dir="./build">
+        	<mkdir dir="classes" />
+    	</fileset>
+		<copy todir="./build/classes" overwrite="true">
 			<fileset dir="${toncat}\webapps\${APP}\WEB-INF\classes"/>
 		</copy>
 	</target>
+		
+		
+
 
 	<!-- inicio teste -->
 	<target name="test" >
