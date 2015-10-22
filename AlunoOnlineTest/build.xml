@@ -11,23 +11,23 @@
 	<property name="destino" value="/home/novajoc/appservers/apache-tomcat-7x/" />	 
 	
 	<!--  
-		<property name="toncat" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\" />	 	 
-		<property name="destino" value="C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\webapps\" />  	
+		<property name="toncat" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/" />	 	 
+		<property name="destino" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/webapps/" />  	
 	-->
 			
-    <property name="classes" location="${toncat}\webapps\${APP}\WEB-INF\classes"/>
-    <property name="test-classes" location="${toncat}\webapps\${APP}\WEB-INF\classes"  />
-    <property name="test-reports" location="${toncat}\webapps\${APP}\WEB-INF\classes"/>
+    <property name="classes" location="${toncat}/webapps/${APP}/WEB-INF/classes"/>
+    <property name="test-classes" location="${toncat}/webapps/${APP}/WEB-INF/classes"  />
+    <property name="test-reports" location="${toncat}/webapps/${APP}/WEB-INF/classes"/>
 
 	
 	<property name="testdir" location="test" />
 	<property name="srcdir" location="src" />
 
    <path id="classpath">
-        <fileset dir="${toncat}\lib">
+        <fileset dir="${toncat}/lib">
             <include name="*.jar"/>
         </fileset>
-        <fileset dir="WebContent\WEB-INF\lib">
+        <fileset dir="WebContent/WEB-INF/lib">
             <include name="*.jar"/>
         </fileset>
     </path>
@@ -42,12 +42,12 @@
     </path>
 
 	<target name="unpack">
-		<unwar src="${warfile}.war" dest="${toncat}webapps\${warfile}" />
+		<unwar src="${warfile}.war" dest="${toncat}webapps/${warfile}" />
 	</target>
 
 	<target name="create">
 		<war destfile="${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
-			<classes dir="build\classes" />
+			<classes dir="build/classes" />
 			<fileset dir="WebContent">
 				<exclude name="WEB-INF/web.xml" />
 			</fileset>
@@ -65,7 +65,7 @@
 		
 	<target name="copy-build-class">
 		<copy todir="./build/classes" overwrite="true">
-			<fileset dir="${toncat}\webapps\${APP}\WEB-INF\classes"/>
+			<fileset dir="${toncat}/webapps/${APP}/WEB-INF/classes"/>
 		</copy>
 	</target>
 		
