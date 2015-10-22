@@ -42,7 +42,7 @@
     </path>
 
 	<target name="unpack">
-		<unwar src="${warfile}.war" dest="${toncat}webapps/${warfile}" />
+		<unwar src="${warfile}.war" dest="${warfile}" />
 	</target>
 
 	<target name="create">
@@ -65,7 +65,7 @@
 		
 	<target name="copy-build-class">
 		<copy todir="./build/classes" overwrite="true">			
-			<fileset dir="${toncat}webapps/${APP}/WEB-INF/classes/*"/>
+			<fileset dir="${warfile}/WEB-INF/classes/*.class"/>
 		</copy>
 	</target>
 		
