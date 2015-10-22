@@ -67,11 +67,11 @@
 	            	</batchtest> 
 	        </junit>
     	</target>
-	<!-- fim teste -->
+	<!-- fim teste <antcall target="create" />-->
 
 
 	<target name="deploy">
-		<antcall target="create" />
+		
 		<antcall target="compile" />			
 		<antcall target="test" />
 	</target>
