@@ -7,24 +7,22 @@
 	<property name="APP" value="AlunoOnlineTest" />
 	
 	<!-- -->
-	<property name="toncat" value="/home/novajoc/appservers/apache-tomcat-7x/" />
-	<property name="destino" value="/home/novajoc/appservers/apache-tomcat-7x/" />	 
+	<property name="tomcat" value="/home/novajoc/appservers/apache-tomcat-7x/" />
 	
 	<!--  
-		<property name="toncat" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/" />	 	 
-		<property name="destino" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/webapps/" />  	
+		<property name="tomcat" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/" />	 	 
 	-->
 			
-    <property name="classes" location="${toncat}/webapps/${APP}/WEB-INF/classes"/>
+    <property name="classes" location="${tomcat}/webapps/${APP}/WEB-INF/classes"/>
     <property name="test-classes" location="./build/classes"  />
-    <property name="test-reports" location="${toncat}/webapps/${APP}/WEB-INF/classes"/>
+    <property name="test-reports" location="${tomcat}/webapps/${APP}/WEB-INF/classes"/>
 
 	
 	<property name="testdir" location="test" />
 	<property name="srcdir" location="src" />
 
    <path id="classpath">
-        <fileset dir="${toncat}/lib">
+        <fileset dir="${tomcat}/lib">
             <include name="*.jar"/>
         </fileset>
         <fileset dir="WebContent/WEB-INF/lib">
@@ -42,7 +40,7 @@
     </path>
     
 	<target name="create-war-in-tomcat">
-			<war destfile="${destino}webapps/${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
+			<war destfile="${tomcat}webapps/${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
 				<classes dir="build/classes" />
 				<fileset dir="WebContent">
 					<exclude name="WEB-INF/web.xml" />
