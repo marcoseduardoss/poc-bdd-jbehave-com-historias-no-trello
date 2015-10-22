@@ -41,10 +41,41 @@
         </fileset>
     </path>
     
-    <target name="deploy">
+	<target name="create">
+			<war destfile="${destino}webapps/${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
+				<classes dir="build/classes" />
+				<fileset dir="WebContent">
+					<exclude name="WEB-INF/web.xml" />
+				</fileset>
+			</war>
+	</target>
+					
+					
+	<target name="compile">
         <mkdir dir="build/classes"/>
         <javac srcdir="src" destdir="build/classes" classpathref="test-classpath"/>
+    </target>		
+		
+	<!-- inicio teste  -->
+	<target name="test" >
+        <mkdir dir="${test-reports}"/>
+        <junit printsummary="yes">
+            <classpath refid="test-classpath"/>
+            <formatter type="brief" usefile="false"/>
+            <formatter type="xml"/>
+            <batchtest todir="${test-reports}" failureproperty="failed" errorproperty="failed">
+                <fileset dir="${test-classes}" includes="**/*Test*.class"/>
+            </batchtest> 
+        </junit>
     </target>
+	<!-- fim teste -->
+
+
+	<target name="deploy">
+		<antcall target="create" />
+		<antcall target="compile" />			
+		<antcall target="test" />
+	</target>
 
 
 </project>
