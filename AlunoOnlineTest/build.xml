@@ -16,7 +16,7 @@
 	-->
 			
     <property name="classes" location="${toncat}/webapps/${APP}/WEB-INF/classes"/>
-    <property name="test-classes" location="/build/classes"  />
+    <property name="test-classes" location="./build/classes"  />
     <property name="test-reports" location="${toncat}/webapps/${APP}/WEB-INF/classes"/>
 
 	
