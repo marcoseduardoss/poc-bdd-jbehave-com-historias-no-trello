@@ -5,12 +5,20 @@ import static org.junit.Assert.assertEquals;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.junit.Before;
 
+import br.com.marcos.bddytrello.bdd.JunitStoryTrello;
 import br.uece.jbehave.Soma;
 
-public class AdderSteps {
+public class AdderSteps extends JunitStoryTrello{
 	
 	private static Soma adder;
+	
+	@Before
+	public void before(){
+		setIdCard("5614553d5e0a78744c0a913d");
+		setSteps(this);
+	}
 	
 	@Given("um somador é criado")
 //	@Aliases(values={"um somador é criado"})

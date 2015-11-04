@@ -1,17 +1,24 @@
 package br.uece.eada.teste;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import org.jbehave.core.annotations.Aliases;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.junit.Before;
 
+import br.com.marcos.bddytrello.bdd.JunitStoryTrello;
 import br.uece.jbehave.Subtracao;
 
-public class SubSteps {
+public class SubSteps extends JunitStoryTrello{	
 	
 	private static Subtracao sub;
+
+	@Before
+	public void before(){
+		setIdCard("56155f117c3c5e684aa8e321");
+		setSteps(this);
+	}
 	
 	@Given("um subtrator eh criado")
 //	@Aliases(values={"um subtrator eh instanciado"})

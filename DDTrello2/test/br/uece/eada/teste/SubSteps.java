@@ -2,12 +2,12 @@ package br.uece.eada.teste;
 
 import static org.junit.Assert.*;
 
-import me.kuniga.jbehave.Subtracao;
-
 import org.jbehave.core.annotations.Aliases;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+
+import br.uece.jbehave.Subtracao;
 
 public class SubSteps {
 	

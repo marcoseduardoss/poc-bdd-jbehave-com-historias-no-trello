@@ -6,17 +6,19 @@
 	<property name="warfile" value="AlunoOnlineTest" />
 	<property name="APP" value="AlunoOnlineTest" />
 	
-	<!-- -->
+	<!--
 	<property name="toncat" value="/home/novajoc/appservers/apache-tomcat-7x/" />
-	<property name="destino" value="/home/novajoc/appservers/apache-tomcat-7x/" />	 
-	
-	<!--  
-		<property name="toncat" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/" />	 	 
-		<property name="destino" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/webapps/" />  	
+	<property name="destino" value="/home/novajoc/appservers/apache-tomcat-7x/webapps" />	 	
+	-->
+	<property name="toncat" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/" />	 	 
+	<property name="destino" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/webapps/" />  	
+		
+	<!--
+	  
 	-->
 			
     <property name="classes" location="${toncat}/webapps/${APP}/WEB-INF/classes"/>
-    <property name="test-classes" location="${toncat}/webapps/${APP}/WEB-INF/classes"  />
+    <property name="test-classes" location="./build/classes"  />
     <property name="test-reports" location="${toncat}/webapps/${APP}/WEB-INF/classes"/>
 
 	
@@ -40,36 +42,22 @@
             <include name="*.jar"/>
         </fileset>
     </path>
-
-	<target name="unpack">
-		<unwar src="${warfile}.war" dest="${warfile}" />
-	</target>
-
+    
 	<target name="create">
-		<war destfile="${destino}webapps/${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
-			<classes dir="classes" />
-			<fileset dir="WebContent">
-				<exclude name="WEB-INF/web.xml" />
-			</fileset>
-		</war>
+			<war destfile="${destino}/${warfile}.war" webxml="WebContent/WEB-INF/web.xml" update="true">
+				<classes dir="build/classes" />
+				<fileset dir="WebContent">
+					<exclude name="WEB-INF/web.xml" />
+				</fileset>
+			</war>
 	</target>
-
-	<!--	
-	<target name="copy">
-		<copy todir="${destino}webapps" overwrite="true">
-			<fileset dir=".">
-				<include name="*.war" />
-			</fileset>
-		</copy>
-	</target>
-	-->	
+					
+					
+	<target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="test" destdir="build/classes" classpathref="test-classpath"/>
+    </target>		
 		
-	<target name="copy-build-class">
-		<copy todir="./build/classes" overwrite="true">			
-			<fileset dir="${warfile}/WEB-INF/classes/"/>
-		</copy>
-	</target>
-
 	<!-- inicio teste  -->
 	<target name="test" >
         <mkdir dir="${test-reports}"/>
@@ -82,14 +70,14 @@
             </batchtest> 
         </junit>
     </target>
-	<!-- fim teste -->
+	<!-- fim teste <antcall target="create" />-->
+
 
 	<target name="deploy">
-		<antcall target="create" />
-		<antcall target="unpack" />
-		<antcall target="copy-build-class" />		
+		
+		<antcall target="compile" />			
 		<antcall target="test" />
 	</target>
 
-</project>
 
+</project>

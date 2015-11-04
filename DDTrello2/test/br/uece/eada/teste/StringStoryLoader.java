@@ -1,18 +1,12 @@
 package br.uece.eada.teste;
 
-import java.util.List;
-
-import me.kuniga.jbehave.NetClientGet;
-
 import org.jbehave.core.io.StoryLoader;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.internal.LinkedTreeMap;
-import com.google.gson.reflect.TypeToken;
 import com.julienvey.trello.domain.Card;
+
+import br.uece.jbehave.NetClientGet;
 
 public class StringStoryLoader implements StoryLoader {
 
