@@ -12,7 +12,7 @@ import br.uece.jbehave.Subtracao;
 
 public class SubtracaoTest extends JunitStoryTrello{	
 	
-	private static Subtracao sub;
+	private static Subtracao sub;//sdsdsd
 
 	@Before
 	public void before(){

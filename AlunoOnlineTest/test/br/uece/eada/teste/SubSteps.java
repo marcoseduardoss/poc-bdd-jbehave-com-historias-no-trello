@@ -21,7 +21,7 @@ public class SubSteps extends JunitStoryTrello{
 	}
 	
 	@Given("um subtrator eh criado")
-//	@Aliases(values={"um subtrator eh instanciado"})
+//	@Aliases(values={"um subtrator eh instanciado" })
 	public void givenUmSubtratorÉInstanciado(){
 		sub = new Subtracao();
 	}
