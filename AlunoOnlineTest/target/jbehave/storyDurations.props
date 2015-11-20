@@ -1,6 +1,6 @@
 #org.jbehave.core.embedder.StoryManager
-#Wed Nov 04 16:48:12 BRST 2015
-br/uece/eada/teste/sub_steps.story=0
+#Thu Nov 19 21:23:33 GMT-03:00 2015
+br/uece/eada/teste/cadastro_acc_steps.story=15000
 threads=1
-total=0
-threadAverage=0
+total=15000
+threadAverage=15000

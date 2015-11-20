@@ -15,8 +15,8 @@ public class AdderSteps extends JunitStoryTrello{
 	private static Soma adder;
 	
 	@Before
-	public void before(){
-		setIdCard("5614553d5e0a78744c0a913d");
+	public void before(){		
+		setIdCardKeyAndToken("5614553d5e0a78744c0a913d",Trello.KEY, Trello.TOKEN);
 		setSteps(this);
 	}
 	

@@ -16,7 +16,7 @@ public class SubSteps extends JunitStoryTrello{
 
 	@Before
 	public void before(){
-		setIdCard("56155f117c3c5e684aa8e321");
+		setIdCardKeyAndToken("56155f117c3c5e684aa8e321", Trello.KEY, Trello.TOKEN);
 		setSteps(this);
 	}
 	
