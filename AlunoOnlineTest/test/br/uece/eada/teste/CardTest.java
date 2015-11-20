@@ -20,8 +20,7 @@ public class CardTest extends JunitStoryTrello {
 		setSteps(this);
 		
 		//inicializa dados de acesso ao seleinum
-		this.paginWeb = new PaginaWeb("C:\\marcos\\phantomjs.exe");
-//		this.paginWeb = new PaginaWeb();
+		this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);
 	}
 
 	@Given("o coordenador esteja logado no sistema")
