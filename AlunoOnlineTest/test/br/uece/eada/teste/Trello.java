@@ -1,6 +1,7 @@
 package br.uece.eada.teste;
 
 public class Trello {
+
 	public static final String PATH_PHANTOMJS = "/home/novajoc/phantomjs";	// inicializa dados de acesso ao seleinum
 //	public static final String PATH_PHANTOMJS = "C:\\marcos\\phantomjs.exe";
 	public static final String URL 		= "file:///C:/projetos/java/EADA/TELAS_EADA";
