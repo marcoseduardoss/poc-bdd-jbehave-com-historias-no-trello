@@ -7,12 +7,11 @@ import org.junit.After;
 import org.junit.Before;
 
 import br.com.marcos.bddytrello.bdd.JunitStoryTrello;
-import br.com.marcos.bddytrello.selenium.PaginaWeb;
 
 
 public class CadastroAccSteps extends JunitStoryTrello {
 		
-	private PaginaWeb paginWeb = null;
+//	private PaginaWeb paginWeb = null;
 
 	@Before
 	public void before() {
