@@ -17,7 +17,7 @@ public class TesteSteps extends JunitStoryTrello {
 	@Before
 	public void before() {
 
-		// inicializa dados de acesso ao trello 
+		// inicializa dados de acesso ao trello
 		setIdCardKeyAndToken("562113fc9399876b9eb3be55", Trello.KEY, Trello.TOKEN);
 		setSteps(this);
 		
