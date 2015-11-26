@@ -1,7 +1,5 @@
 package br.uece.eada.teste;
 
-import static org.junit.Assert.assertTrue;
-
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
@@ -33,7 +31,7 @@ public class CadastroAccSteps extends JunitStoryTrello {
 
 	@After
 	public void after() {
-		this.paginWeb.close();// FECHA O NAVEADOR APÓS O USO
+//		this.paginWeb.close();// FECHA O NAVEADOR APÓS O USO
 	}
 	
 	@Given("estou logado no AlunoOnline")
