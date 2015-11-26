@@ -25,7 +25,7 @@ public class CadastroAccSteps extends JunitStoryTrello {
 //		this.paginWeb = new PaginaWeb();
 		
 		// inicializa dados de acesso ao seleinum
-		this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);		
+//		this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);		
 		
 	}
 
