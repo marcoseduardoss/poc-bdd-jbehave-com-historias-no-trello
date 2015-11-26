@@ -25,13 +25,13 @@ public class CadastroAccSteps extends JunitStoryTrello {
 //		this.paginWeb = new PaginaWeb();
 		
 		// inicializa dados de acesso ao seleinum
-		this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);		
+//		this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);		
 		
 	}
 
 	@After
 	public void after() {
-//		this.paginWeb.close();// FECHA O NAVEADOR APÓS O USO
+//		this.paginWeb.close();// FECHA O NAVEADOR APÓS O USO 
 	}
 	
 	@Given("estou logado no AlunoOnline")
