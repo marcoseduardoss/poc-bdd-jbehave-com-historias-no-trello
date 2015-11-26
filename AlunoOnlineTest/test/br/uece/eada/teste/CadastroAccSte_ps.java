@@ -9,7 +9,7 @@ import org.junit.Before;
 import br.com.marcos.bddytrello.bdd.JunitStoryTrello;
 
 
-public class CadastroAccSteps extends JunitStoryTrello {
+public class CadastroAccSte_ps extends JunitStoryTrello {
 		
 //	private PaginaWeb paginWeb = null;
 

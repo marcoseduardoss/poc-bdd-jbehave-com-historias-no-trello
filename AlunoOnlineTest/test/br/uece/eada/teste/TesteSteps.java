@@ -7,17 +7,21 @@ import org.junit.After;
 import org.junit.Before;
 
 import br.com.marcos.bddytrello.bdd.JunitStoryTrello;
+import br.com.marcos.bddytrello.selenium.PaginaWeb;
 
 
 public class TesteSteps extends JunitStoryTrello {
 		
+	private PaginaWeb paginWeb;
+
 	@Before
 	public void before() {
 
-		// inicializa dados de acesso ao trello
+		// inicializa dados de acesso ao trello 
 		setIdCardKeyAndToken("562113fc9399876b9eb3be55", Trello.KEY, Trello.TOKEN);
 		setSteps(this);
 		
+		this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);
 	}
 
 	@After
