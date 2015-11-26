@@ -12,7 +12,7 @@ import br.com.marcos.bddytrello.selenium.PaginaWeb;
 
 public class CadastroAccSteps extends JunitStoryTrello {
 		
-	private PaginaWeb paginWeb = null;
+//	private PaginaWeb paginWeb = null;
 
 	@Before
 	public void before() {
