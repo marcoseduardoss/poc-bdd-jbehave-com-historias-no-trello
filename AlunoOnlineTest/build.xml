@@ -64,7 +64,7 @@
 		        <formatter type="xml"/>
 	            	
 	            	<batchtest fork="yes">
-	                	<fileset dir="${test-classes}" includes="**/*Test*.class"/>
+	                	<fileset dir="${test-classes}" includes="**/*Steps*.class"/>
 	            	</batchtest> 
 	        </junit>
     	</target>
