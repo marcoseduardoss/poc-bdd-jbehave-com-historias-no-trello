@@ -38,7 +38,7 @@ public class CadastroAccSteps extends JunitStoryTrello {
 	
 	@Given("estou logado no AlunoOnline")
 	public void givenEuEstouLogadoNoMóduloAlunoOnline() {
-		this.paginWeb.open(Trello.URL + "/logado.html");
+		this.paginWeb.open(Trello.URL + "/index.html");
 	}
 
 	@When("clico no link $link")
