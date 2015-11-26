@@ -22,6 +22,7 @@ public class TesteSteps extends JunitStoryTrello {
 		setSteps(this);
 		
 		this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);
+		this.paginWeb.open("http://www.google.com.br");
 	}
 
 	@After
