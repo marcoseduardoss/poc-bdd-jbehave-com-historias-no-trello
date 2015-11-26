@@ -14,6 +14,10 @@ public class TesteSteps extends JunitStoryTrello {
 		
 	private PaginaWeb paginWeb;
 
+	static{
+		System.setProperty("phantomjs.binary.path", Trello.PATH_PHANTOMJS);	
+	}
+
 	@Before
 	public void before() {
 
