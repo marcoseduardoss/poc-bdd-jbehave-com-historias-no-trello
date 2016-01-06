@@ -7,7 +7,7 @@
 	<property name="APP" value="AlunoOnlineTest" />
 	
 	<!-- -->
-	<property name="tomcat" value="/home/novajoc/appservers/apache-tomcat-7x/" />
+	<property name="tomcat" value="/var/lib/tomcat7/" />
 	
 	<!--  
 		<property name="tomcat" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/" />	 	 
