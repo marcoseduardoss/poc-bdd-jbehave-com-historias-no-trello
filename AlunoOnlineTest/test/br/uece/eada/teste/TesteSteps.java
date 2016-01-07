@@ -24,12 +24,12 @@ public class TesteSteps extends JunitStoryTrello {
 		System.out.println("Marcos: "+Trello.PATH_PHANTOMJS);
 		
 		// inicializa dados de acesso ao trello
-		setIdCardKeyAndToken("562113fc9399876b9eb3be55", Trello.KEY, Trello.TOKEN);
-		setSteps(this);
+		//setIdCardKeyAndToken("562113fc9399876b9eb3be55", Trello.KEY, Trello.TOKEN);
+		//setSteps(this);
 		
-		this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);
+	//	this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);
 		
-		this.paginWeb.open("http://www.google.com.br");
+	//	this.paginWeb.open("http://www.google.com.br");
 	}
 
 	@After
