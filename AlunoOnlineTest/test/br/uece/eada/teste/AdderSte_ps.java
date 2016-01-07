@@ -10,7 +10,7 @@ import org.junit.Before;
 import br.com.marcos.bddytrello.bdd.JunitStoryTrello;
 import br.uece.jbehave.Soma;
 
-public class AdderSteps extends JunitStoryTrello{
+public class AdderSte_ps extends JunitStoryTrello{
 	
 	private static Soma adder;
 	
