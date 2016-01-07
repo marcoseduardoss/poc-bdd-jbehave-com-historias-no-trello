@@ -49,9 +49,14 @@
 	</target>
 					
 					
-	<target name="compile">
+    <target name="compile">
         <mkdir dir="build/classes"/>
-        <javac srcdir="test" destdir="build/classes" classpathref="test-classpath" encoding="utf-8" includeAntRuntime="false"  />
+        <javac srcdir="test" destdir="build/classes" classpathref="test-classpath" encoding="utf-8" includeAntRuntime="false"  >
+        	<src path="${srcdir}"/>
+    		<src path="${testdir}"/>
+    		<src path="${classes}"/>
+    		<src path="${test-reports}"/>
+    	</javac>	
     </target>		
 		
 	<!-- inicio teste  -->
