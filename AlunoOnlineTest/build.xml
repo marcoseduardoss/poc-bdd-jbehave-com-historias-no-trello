@@ -59,7 +59,7 @@
 		
 	<!-- inicio teste  -->
 	<target name="test" >
-	        <junit printsummary="yes" haltonfailure="yes">
+	        <junit printsummary="yes" haltonfailure="yes" showoutput="yes">
 	            
 	            	<classpath refid="test-classpath"/>
 	            	
