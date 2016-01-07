@@ -14,19 +14,21 @@ public class TesteSteps extends JunitStoryTrello {
 		
 	private PaginaWeb paginWeb;
 
-	static{
-		System.setProperty("phantomjs.binary.path", Trello.PATH_PHANTOMJS);	
-	}
+	//static{
+	//	System.setProperty("phantomjs.binary.path", Trello.PATH_PHANTOMJS);	
+//	}
 
 	@Before
 	public void before() {
-
+		
+		System.out.println("Marcos: "+Trello.PATH_PHANTOMJS);
+		
 		// inicializa dados de acesso ao trello
 		setIdCardKeyAndToken("562113fc9399876b9eb3be55", Trello.KEY, Trello.TOKEN);
 		setSteps(this);
 		
 		this.paginWeb = new PaginaWeb(Trello.PATH_PHANTOMJS);
-		System.out.println("Marcos: "+Trello.PATH_PHANTOMJS);
+		
 		this.paginWeb.open("http://www.google.com.br");
 	}
 
