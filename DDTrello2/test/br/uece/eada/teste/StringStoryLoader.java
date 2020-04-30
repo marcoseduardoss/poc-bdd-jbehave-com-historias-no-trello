@@ -29,7 +29,7 @@ public class StringStoryLoader implements StoryLoader {
 		String json = NetClientGet
 				.get("https://api.trello.com/1/cards/"
 						+ idCard
-						+ "?key=9d31db58c7b43cb5b11e0832df3a6bc2&token=a5948f990dce6320b68739410ee0ca92b57956233f7cc1a1daaa6ef47feb01f0");
+						+ "?key=<<KEY_TRELLO>>&token=<<TOKEM_TRELLO>>");
 		Card obj = null;
 		if (json != null) {
 			Gson gson = new GsonBuilder()
