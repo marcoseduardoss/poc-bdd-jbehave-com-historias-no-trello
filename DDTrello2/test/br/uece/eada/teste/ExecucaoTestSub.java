@@ -32,7 +32,6 @@ public class ExecucaoTestSub extends JUnitStory {
         
 		// Onde procurar pelas estorias
 //		LoadFromClasspath loadFromClasspath = new LoadFromClasspath(this.getClass());
-//		StoryLoader loadFromClasspath = (StoryLoader) new LoadOdtFromGoogle("marcos.eduardo@uece.br", "Detacg12", "https://drive.google.com/folderview?id=0Bz8TuhoV_k8eTVdXOFBhRUw2cms&usp=sharing");
 		StringStoryLoader loadFromClasspath = new StringStoryLoader("56155f117c3c5e684aa8e321");
 		
 		Configuration useStoryLoader = useStoryParser.useStoryLoader(loadFromClasspath);
