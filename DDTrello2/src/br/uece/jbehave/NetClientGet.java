@@ -13,11 +13,11 @@ public class NetClientGet {
 	public static boolean ativarProxy = false;	
 	
 	// http://localhost:8080/RESTfulExample/json/product/get
-	public static void main(String[] args) {
+//	public static void main(String[] args) {
 
-	  System.out.println(get("https://api.trello.com/1/cards/5614553d5e0a78744c0a913d?key=9d31db58c7b43cb5b11e0832df3a6bc2&token=a5948f990dce6320b68739410ee0ca92b57956233f7cc1a1daaa6ef47feb01f0") );
+//	  System.out.println(get("https://api.trello.com/1/cards/<id-card>") );
 
-	}
+//	}
 
 	public static String get(String path) {
 		String retorno = "";
