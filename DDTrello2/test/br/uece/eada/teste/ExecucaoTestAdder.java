@@ -27,7 +27,7 @@ public class ExecucaoTestAdder extends JUnitStory {
         
 		// Onde procurar pelas estorias
 //		LoadFromClasspath loadFromClasspath = new LoadFromClasspath(this.getClass());
-//		StoryLoader loadFromClasspath = (StoryLoader) new LoadOdtFromGoogle("marcos.eduardo@uece.br", "Detacg12", "https://drive.google.com/folderview?id=0Bz8TuhoV_k8eTVdXOFBhRUw2cms&usp=sharing");
+//		StoryLoader loadFromClasspath = (StoryLoader) new LoadOdtFromGoogle("email@email.com.br", "PASSWORD", "https://drive.google.com/folderview?id=0Bz8TuhoV_k8eTVdXOFBhRUw2cms&usp=sharing");
 		StringStoryLoader loadFromClasspath = new StringStoryLoader("5614553d5e0a78744c0a913d");
 		
 		Configuration useStoryLoader = useStoryParser.useStoryLoader(loadFromClasspath);
