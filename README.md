@@ -1,4 +1,4 @@
-# PoC - Behavior Driven Development 
+# PoC - Behavior Driven Development (BDD)
 poc-bdd-jbehave-com-historias-no-trello
 
 
